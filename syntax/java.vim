@@ -85,10 +85,10 @@ endif
 exec "syn sync ccomment javaComment minlines=" . java_minlines
 
 "" Fold method definitions
-syn region javaFuncDef start="^\z(\s*\)\(\(public\|protected\|private\|static\|abstract\|final\|native\|synchronized\)[ \n]\+\)*\(void\|boolean\|char\|byte\|short\|int\|long\|float\|double\|\([A-Z][A-Za-z0-9_<>]*\)\)[ \n]\+[a-z][A-Za-z0-9_]*[ \n]*(\_[^)]*)[ \n]*\(\<throws\>[ \n]\+[A-Z]\w\+\([ \n]*,[ \n]*[A-Z]\w\+\)*[ \n]*\)\?{" end="^\z1}$" keepend transparent fold
+syn region javaFuncDef start="^\z(\s*\)\(\(public\|protected\|private\|static\|abstract\|final\|native\|synchronized\)[ \n]\+\)*\(void\|boolean\|char\|byte\|short\|int\|long\|float\|double\|\([A-Z][A-Za-z0-9_<>]*\)\)[ \n]\+[a-z][A-Za-z0-9_]*[ \n]*(\_[^)]*)[ \n]*\(\<throws\>[ \n]\+[A-Z]\w\+\([ \n]*,[ \n]*[A-Z]\w\+\)*[ \n]*\)\?{ *$" end="^\z1}$" keepend transparent fold
 
 "" Fold constructors
-syn region javaConstructorDef start="^\z(\s*\)public[ \n]\+[A-Z][A-Za-z0-9_]*[ \n]*(\_[^)]*)[ \n]*\(\<throws\>[ \n]\+[A-Z]\w\+\([ \n]*,[ \n]*[A-Z]\w\+\)*[ \n]*\)\?{" end="^\z1}$" keepend transparent      fold  
+syn region javaConstructorDef start="^\z(\s*\)public[ \n]\+[A-Z][A-Za-z0-9_]*[ \n]*(\_[^)]*)[ \n]*\(\<throws\>[ \n]\+[A-Z]\w\+\([ \n]*,[ \n]*[A-Z]\w\+\)*[ \n]*\)\?{ *$" end="^\z1}$" keepend transparent      fold  
 "" Uncomment this if you want to fold all {}
 "syn region javaFuncDef start="^\z(\s*\){" end="^\z1}" keepend transparent fold
 
